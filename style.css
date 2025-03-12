@@ -63,7 +63,7 @@ li:hover {
     cursor: pointer;
 }
 .main-left p, .text{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -85,7 +85,6 @@ li:hover {
 }
 .text::after{
     content: "|";
-    animation-delay: 6s;
     position: absolute;
     right: 0;
     width: 100%;
@@ -103,17 +102,23 @@ li:hover {
         color: transparent;
     }
 }
+
+@media (min-width:1072px) {
+
+}
+
+
 .name{
     color: gray;
 }
 .present{
-    font-size: 30px !important;
+    font-size: 1.5rem !important;
     margin-top: 10px;
     font-family: 'Space Grotesk', sans-serif;
 }
 .my-image{
     height: 100%;
-    width: 450px;
+    width: 350px;
     background-blend-mode: color-burn;
 }
 .my-image-div{border-radius: 50%;
@@ -171,7 +176,7 @@ li:hover {
 .works-W{
     padding: 40px ;
     height: max-content;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -199,7 +204,7 @@ li:hover {
     border-radius: 5px;
     cursor: pointer;
 }
-.work:hover .work-bio{
+.work:hover .work-bio, .work:hover .work-bio-e{
     bottom: 0px;
     background-color: rgba(113, 111, 111, 0.8);
 }
@@ -209,7 +214,7 @@ li:hover {
     gap: 70px;
     justify-content: center;
 }
-.work-bio{
+.work-bio , .work-bio-e{
     background-color: rgb(0, 0, 0);
     height: 70px;
     display: flex;
@@ -221,6 +226,12 @@ li:hover {
     gap: 10px;
     padding: 10px 10px 15px;
     position: absolute;
+}
+.work-bio-e{
+    height: 100px;
+    bottom: -75px;
+    padding-top: 15px ;
+    padding-right: 25px;
 }
 .work-pre{
     height: 100%;
@@ -299,17 +310,20 @@ li:hover {
     height: 8px;
     border-radius: 5px;
 }
-.html,.css,.js{
+.html,.css,.js,.react{
     height: 8px;
     border-radius: 5px;
-    width: 90%;
+    width: 98%;
     background-color: rgb(248, 205, 10);
 }
 .css{
-    width: 82%;
+    width: 90%;
 }
 .js{
-    width: 42%;
+    width: 78%;
+}
+.react{
+    width: 40%;
 }
 
 .skill, .skill2{

@@ -207,3 +207,23 @@ gsap.from(".footer-logo3",{
         end:"top 80%"
     }
 })
+function handleResize() {
+    if (window.innerWidth <= 1072 && !sessionStorage.getItem('smallScreenConfirmed')) {
+        if (confirm('Your screen size is small. This website is not optimized for small screens. Click "OK" to continue anyway.')) {
+            window.removeEventListener('resize', handleResize);
+            sessionStorage.setItem('smallScreenConfirmed', 'true');
+        }
+    }
+}
+
+function checkWidth() {
+    if (window.innerWidth <= 1072 && !sessionStorage.getItem('smallScreenConfirmed')) {
+        if (confirm('Kuddos! You have a small screen mate!\nThe website is not yet optimized for small screens.\nHowever, if you still want to view, click "OK".')) {
+            window.removeEventListener('resize', handleResize);
+            sessionStorage.setItem('smallScreenConfirmed', 'true');
+        }
+    }
+}
+
+window.addEventListener('resize', checkWidth);
+window.addEventListener('load', checkWidth);
